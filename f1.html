@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        * { margin: 0px; padding: 0px; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        a { text-decoration: none; } 
+        ul { list-style: none; }
+        .pointer { cursor: pointer; }
+
+        body { background-image: url('https://www.letelegramme.fr/images/2020/09/25/le-nouveau-titre-s-intitule-amour-toxic_5320260.jpg'); background-size: cover; background-color: rgba(46, 46, 46, .3); min-height: 100vh; backdrop-filter: blur(200px); color: white;  }
+        header{ padding: 30px 0px; }
+        header .header-container { display: flex; justify-content: space-between; width: 80%; margin: 0px auto; }
+        
+        #app .app-container { display: grid; grid-template-columns: 1fr 1fr; grid-gap: 60px; width: 80%; margin: 0px auto; }
+        .app-container .app-container-artist { display: flex; align-items: center; } 
+        .app-container .app-container-artist .play { height: 60px; width: 60px; border-radius: 100%; background-color: white; margin-right: 10px; display: flex; justify-content: center; align-items: center; cursor: pointer; }
+        .app-container .app-container-artist h1 { font-size: 50px; } 
+        .playlist-container { margin-top: 40px; }
+        .playlist > .playlist-item { display: grid; grid-gap: 10px; grid-template-columns: .2fr .3fr 2fr 1fr .5fr .5fr; border-bottom: .5px solid #a5a5a5; align-items: center; cursor: pointer; padding: 0px 10px; transition: .3s;}
+        .playlist > .playlist-item:hover { transform: scale(1.03); }
+        .playlist > .playlist-item .item-image img { height: 50px; width: 50px; border-radius: 100%;}
+
+
+        .app-container-part2-player { position: relative; margin-bottom: 20px; }
+        .app-container-part2-player .icon-play { position: absolute; height: 80px; width: 80px; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: white; border-radius: 100%; }
+        .app-container-part2-recent .list-recent li { display: flex; justify-content: space-between;}
+        .app-container-part2-recent .list-albums > div { border-bottom: .5px solid #a5a5a5; padding: 10px; display: flex; justify-content: space-between; }
+
+
+        footer > div { padding: 60px 0px; width: 80%; text-align: center; margin: 0px auto; }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <div>
+                <img src="https://digster-music.com/logo_digster768.svg" alt="">
+            </div>
+            <div>
+                <a href="#">Ecouter maintenant</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="app">
+            <div class="app-container">
+                <div class="app-container-part1">
+                    <!-- play and name of artist -->
+                    <div class="app-container-artist">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+                        </div>
+                        <div>
+                            <h1>Dadju</h1>
+                        </div>
+                    </div>
+                    <!-- name of song -->
+                    <div>
+                        <h2>DANÇARINA (feat. Nicky Jam, MC Pedrinho) - Remix</h2>
+                    </div>
+                    <!-- items-->
+                    <div class="playlist-container">
+                        <div class="playlist">
+                            <div class="playlist-item">
+                                <div class="item-play"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+                                <div class="item-image"><img src="https://i.scdn.co/image/ab676161000051740910ff09d3b54b114d233aa3" alt=""></div>
+                                <div class="item-title">Reine</div>
+                                <div class="item-stats">80,311,348</div>
+                                <div class="item-save"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg></div>
+                                <div class="time">3:53</div>
+                            </div>
+                            <div class="playlist-item">
+                                <div class="item-play"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+                                <div class="item-image"><img src="https://i.scdn.co/image/ab676161000051740910ff09d3b54b114d233aa3" alt=""></div>
+                                <div class="item-title">Dieu Merci</div>
+                                <div class="item-stats">80,311,348</div>
+                                <div class="item-save"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg></div>
+                                <div class="item-time">3:53</div>
+                            </div>
+                            <div class="playlist-item">
+                                <div class="item-play"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+                                <div class="item-image"><img src="https://i.scdn.co/image/ab676161000051740910ff09d3b54b114d233aa3" alt=""></div>
+                                <div class="item-title">Jaloux</div>
+                                <div class="item-stats">80,311,348</div>
+                                <div class="item-save"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg></div>
+                                <div class="item-time">3:53</div>
+                            </div>
+                            <div class="playlist-item">
+                                <div class="item-play"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+                                <div class="item-image"><img src="https://i.scdn.co/image/ab676161000051740910ff09d3b54b114d233aa3" alt=""></div>
+                                <div class="item-title">Par amour</div>
+                                <div class="item-stats">80,311,348</div>
+                                <div class="item-save"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg></div>
+                                <div class="item-time">3:53</div>
+                            </div>
+                            <div class="playlist-item">
+                                <div class="item-play"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+                                <div class="item-image"><img src="https://i.scdn.co/image/ab676161000051740910ff09d3b54b114d233aa3" alt=""></div>
+                                <div class="item-title">Toko Toko</div>
+                                <div class="item-stats">80,311,348</div>
+                                <div class="item-save"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg></div>
+                                <div class="item-time">3:53</div>
+                            </div>
+                            <div class="playlist-item">
+                                <div class="item-play"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+                                <div class="item-image"><img src="https://i.scdn.co/image/ab676161000051740910ff09d3b54b114d233aa3" alt=""></div>
+                                <div class="item-title">Mon soleil</div>
+                                <div class="item-stats">80,311,348</div>
+                                <div class="item-save"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="15px" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg></div>
+                                <div class="item-time">3:53</div>
+                            </div>
+                            <div class="show-more"> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-container-part2">
+                    <!-- image & player music -->
+                    <div class="app-container-part2-player">
+                        <div class="icon-play"></div>
+                        <img src="https://www.chartsinfrance.net/style/breves/6/photo_1609323624.jpg" alt="">
+                    </div>                
+                    <!-- Albums -->
+                    <div class="app-container-part2-recent">
+                        <h4>Albums </h4>
+                        <div class="list-albums">
+                            
+                            <div>
+                                <span>Poison ou Antidote (Miel Book Edition)</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="20px" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></span>
+                            </div>
+                            <div>
+                                <span>Poison Ou Antidote</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="20px" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></span>
+                            </div>  
+                            <div>
+                                <span>Poison Ou Antidote</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="20px" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis culpa laboriosam facere beatae? Dignissimos soluta repellendus aut repudiandae repellat explicabo minus perferendis provident ratione. Dolorem officiis quasi magni ipsa velit!</p>
+        </div>
+    </footer>
+
+</body>
+</html>
